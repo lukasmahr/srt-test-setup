@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  receiver:
+    build: .
+    network_mode: host #host network to make network debugging with wireshark a bit easier
+    environment:
+      - SRT_PORT=8888
+    volumes:
+      - ./stats:/stats
